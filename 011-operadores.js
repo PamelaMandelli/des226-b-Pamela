@@ -1,22 +1,49 @@
-let entrada = require("prompt-sync")();
+// referencia: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators
 
-// vamos calcular
-let strNum1 = entrada("Insira o 1º valor: ");
-let strNum2 = entrada("Insira o 2º valor: ");
+let valor1 = 5;
+let valor2 = 3;
+let valor3 = 1;
+let valor4 = 3;
+let valor5 = "Senha";
+let valor6 = "senha";
+let valor7 = "";
+let valor8 = "5";
 
-let num1 = parseInt(strNum1);
-let num2 = parseInt(strNum2);
+let maior = valor1 > valor2;
+let menor = valor1 < valor2;
+let maiorIgual = valor2 >= valor4;
+let menorIgual = valor2 <= valor4;
 
-let soma = num1 + num2;
-let subtracao = num1 - num2;
-let multiplicacao = num1 * num2;
-let divisao = num1 / num2;
-let inteiroDivisao = parseInt(num1 / num2);
-let restoDivisao = num1 % num2;
+console.log("<, >, >-, <=");
+console.log(`${valor1} > ${valor2} -> ${maior}`);
+console.log(`${valor1} < ${valor2} -> ${menor}`);
+console.log(`${valor1} >= ${valor2} -> ${maiorIgual}`);
+console.log(`${valor1} >= ${valor2} -> ${menorIgual}`);
+console.log("");
 
-console.log(`Soma: ${num1} + ${num2} = ${soma}`);
-console.log(`Subtracao: ${num1} - ${num2} = ${subtracao}`);
-console.log(`Multiplicacao: ${num1} * ${num2} = ${multiplicacao}`);
-console.log(`Divisao: ${num1} / ${num2} = ${divisao.toFixed(2)}`);
-console.log(`Inteiro da Divisao: ${num1} / ${num2} = ${inteiroDivisao}`);
-console.log(`Resto Divisao: ${num1} % ${num2} = ${restoDivisao}`);
+console.log("==, ===, !=, !==");
+let igual = valor5 == valor6;
+let igualMesmo = valor5 === valor6;
+let diferente = valor5 != valor6;
+let diferenteMesmo = valor5 !== valor6;
+let igual2 = valor1 == valor8;
+let igualMesmo2 = valor1 === valor8;
+let diferente2 = valor1 != valor8;
+let diferenteMesmo2 = valor1 !== valor8;
+
+console.log(`${valor5} == ${valor6} -> ${igual}`);
+console.log(`${valor5} === ${valor6} -> ${igualMesmo}`);
+console.log(`${valor5} != ${valor6} -> ${diferente}`);
+console.log(`${valor5} !== ${valor6} -> ${diferenteMesmo}`);
+console.log(`${valor1} == ${valor8} -> ${igual2}`);
+console.log(`${valor1} === ${valor8} -> ${igualMesmo2}`);
+console.log(`${valor1} != ${valor8} -> ${diferente2}`);
+console.log(`${valor1} !== ${valor8} -> ${diferenteMesmo2}`);
+console.log("");
+
+console.log("NOT");
+let acessoPermitido = true;
+let acessoVerificado = !acessoPermitido;
+
+console.log(`Valor acesso permitido: ${acessoPermitido}`);
+console.log(`Valor acesso verificado: ${acessoVerificado}`);
